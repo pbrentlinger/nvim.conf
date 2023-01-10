@@ -1,3 +1,6 @@
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
--- vim.api.nvim_win_set_option(id, "cursorline", true)
+vim.wo.foldmethod='expr'
+vim.wo.foldexpr='nvim_treesitter#foldexpr()'
+vim.opt.foldenable=false
+

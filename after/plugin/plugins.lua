@@ -1,10 +1,9 @@
--- lua << EOF
 -- Only define once
 if not require'lspconfig.configs'.hdl_checker then
   require'lspconfig.configs'.hdl_checker = {
     default_config = {
     cmd = {"hdl_checker", "--lsp", };
-    filetypes = {"vhdl", "verilog", "systemverilog"};
+    filetypes = {"hdl", "vhdl", "verilog", "systemverilog"};
       root_dir = function(fname)
         -- will look for the .hdl_checker.config file in parent directory, a
         -- .git directory, or else use the current directory, in that order.
@@ -18,8 +17,4 @@ end
 
 require'lspconfig'.hdl_checker.setup{}
 
--- My Packer Plugins
-require('packer').startup(function(use)
-  use 'dag/vim-fish'
-end)
--- EOF
+

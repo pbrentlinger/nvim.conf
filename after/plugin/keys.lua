@@ -1,7 +1,25 @@
 -- my keybindings
 
--- nnoremap <Leader>o o<Esc>0"_D
--- nnoremap <Leader>O O<Esc>0"_D
+-- "for" "surrounding" "text" "with" "things"
+-- use { "tpope/vim-surround"}
+-- help surround
+-- surround text map is: 
+-- ds -> [D]elete [S]urround
+-- cs -> [C]hange [S]urround
+-- yss( -> [Y]ep  [S]urround [S]urround with ( x )
+-- yssb -> same as above but without spaces
+-- yssB -> same as about but with {} 
+-- ysiw] -> [Y]ep [S]urround [I]n [W]ord and wrap with [] no space
+-- ] } ) > -> no space 
+-- [ { ( < -> with space
+-- b & B are mapped to ( & { repectively
+
+-- tpope/vim-unimpaired shortcuts
+-- help unimpared
+-- [<space> -> newline before cursor
+-- ]<space> -> newline after cursor
+-- [f -> go to next file in directory
+-- ]f -> go to previous file in directory
 
 vim.keymap.set('n', '<leader>o', 'o<Esc>0"_D')
 vim.keymap.set('n', '<leader>O', 'O<Esc>0"_D')
@@ -49,3 +67,7 @@ vim.keymap.set("n", "<leader>c", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- makes file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- Ex commands 
+-- Open new file in tab
+vim.keymap.set("n", "<leader>e", ":Ex<CR>")
+vim.keymap.set("n", "<leader>t", ":Tex<CR>")
