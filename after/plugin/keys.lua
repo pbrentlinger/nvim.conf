@@ -16,11 +16,12 @@
 
 -- tpope/vim-unimpaired shortcuts
 -- help unimpared
--- [<space> -> newline before cursor
--- ]<space> -> newline after cursor
 -- [f -> go to next file in directory
 -- ]f -> go to previous file in directory
+-- [<space> -> newline before cursor
+-- ]<space> -> newline after cursor
 
+-- add line below/above go to newline.
 vim.keymap.set('n', '<leader>o', 'o<Esc>0"_D')
 vim.keymap.set('n', '<leader>O', 'O<Esc>0"_D')
 

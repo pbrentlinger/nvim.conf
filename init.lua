@@ -81,6 +81,16 @@ require('packer').startup(function(use)
   use { "tpope/vim-surround" }
   use { "tpope/vim-repeat" }
   use { "tpope/vim-unimpaired" }
+  use { 'lervag/vimtex' }
+  -- use { "folke/which-key.nvim",
+  --   config = function ()
+  --     vim.o.timeout = true
+  --     vim.o.timeoutlen = 500
+  --     require("which-key").setup {
+  --
+  --     }
+  --   end
+  -- }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
