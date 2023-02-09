@@ -58,21 +58,23 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
   use { 'dag/vim-fish' }
+
   -- plugin to automatically change the current working directory
   -- based largly on .git and other factors
   -- automatically updates the telescope plugin to the same
-  use {
-    "ahmedkhalf/project.nvim",
-    config = function()
-      require("project_nvim").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-        -- require('telescope').load_extension('projects'),
-        -- require 'telescope'.extensions.projects.projects {},
-      }
-    end
-  }
+  -- use {
+  --   "ahmedkhalf/project.nvim",
+  --   config = function()
+  --     require("project_nvim").setup {
+  --       -- your configuration comes here
+  --       -- or leave it empty to use the default settings
+  --       -- refer to the configuration section below
+  --       -- require('telescope').load_extension('projects'),
+  --       -- require 'telescope'.extensions.projects.projects {},
+  --     }
+  --   end
+  -- }
+
   use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
